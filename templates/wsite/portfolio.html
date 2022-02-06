@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Portfolio {% endblock title %}
+
+{% block main_content %}
+    <!--==========
+  Start of page title ==========-->
+
+    <section class="py-10">
+        <div class="container">
+            <div class="row text-center justify-content-center">
+                <div class="col-lg-9 col-xl-8">
+                    <h1>Our <span class="text-warning">Portfolio</span></h1>
+                    <p class="lead">See our work, we’re proud of it.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--==========
+      End of page title ==========-->
+
+
+   <!--==========
+  Start of portfolio section ==========-->
+
+<section class="slice-ptb bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="text-center">
+
+          <!--===== Start of filters =====-->
+          <div class="filters filter-button-group">
+            <ul>
+              <li class="active" data-filter="*">All</li>
+              <li data-filter=".sass">sass</li>
+              <li data-filter=".html">html</li>
+              <li data-filter=".javascript">javascript</li>
+              <li data-filter=".graphic">graphic</li>
+            </ul>
+          </div>
+          <!--===== End of filters =====-->
+
+        </div>
+        <div class="grid portfolio-column-3 popup-container grid-spacing-15">
+
+          <!--===== Start of portfolio =====-->
+          <div class="grid-item html">
+            <div class="portfolio-item-01">
+              <div class="portfolio-item-image">
+                <img class="img-fluid" src="{% static 'images/portfolio/small/01.jpg' %}" alt="">
+                <div class="portfolio-item-hover">
+                  <a class="portfolio-popup" href="{% static 'images/portfolio/small/01.jpg' %}"><i class="fas fa-plus"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-item-caption">
+                <a class="d-flex align-items-center" href="#"> <span>Art unlimited</span>  <i class="fas fa-long-arrow-alt-right ms-auto"></i></a>
+                <ul class="list-unstyled portfolio-item-category">
+                  <li><a href="#">Creative,</a></li>
+                  <li><a href="#">Illustration</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--===== End of portfolio =====-->
+
+          <!--===== Start of portfolio =====-->
+          <div class="grid-item graphic sass">
+            <div class="portfolio-item-01">
+              <div class="portfolio-item-image">
+                <img class="img-fluid" src="{% static 'images/portfolio/small/01.jpg' %}" alt="">
+                <div class="portfolio-item-hover">
+                  <a class="portfolio-popup" href="{% static 'images/portfolio/small/01.jpg' %}"><i class="fas fa-plus"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-item-caption">
+                <a class="d-flex align-items-center" href="#"> <span>Studio magic</span>  <i class="fas fa-long-arrow-alt-right ms-auto"></i></a>
+                <ul class="list-unstyled portfolio-item-category">
+                  <li><a href="#">Graphic,</a></li>
+                  <li><a href="#">Design</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--===== End of portfolio =====-->
+
+          <!--===== Start of portfolio =====-->
+          <div class="grid-item html sass">
+            <div class="portfolio-item-01">
+              <div class="portfolio-item-image">
+                <img class="img-fluid" src="{% static 'images/portfolio/small/01.jpg' %}" alt="">
+                <div class="portfolio-item-hover">
+                  <a class="portfolio-popup" href="{% static 'images/portfolio/small/01.jpg' %}"><i class="fas fa-plus"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-item-caption">
+                <a class="d-flex align-items-center" href="#"> <span>Brilliant brushes</span>  <i class="fas fa-long-arrow-alt-right ms-auto"></i></a>
+                <ul class="list-unstyled portfolio-item-category">
+                  <li><a href="#">Photography,</a></li>
+                  <li><a href="#">Music</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--===== End of portfolio =====-->
+
+          <!--===== Start of portfolio =====-->
+          <div class="grid-item javascript graphic">
+            <div class="portfolio-item-01">
+              <div class="portfolio-item-image">
+                <img class="img-fluid" src="{% static 'images/portfolio/small/01.jpg' %}" alt="">
+                <div class="portfolio-item-hover">
+                  <a class="portfolio-popup" href="{% static 'images/portfolio/small/01.jpg' %}"><i class="fas fa-plus"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-item-caption">
+                <a class="d-flex align-items-center" href="#"> <span>Superb studios</span>  <i class="fas fa-long-arrow-alt-right ms-auto"></i></a>
+                <ul class="list-unstyled portfolio-item-category">
+                  <li><a href="#">Clients,</a></li>
+                  <li><a href="#">Magazine</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--===== End of portfolio =====-->
+
+          <!--===== Start of portfolio =====-->
+          <div class="grid-item javascript graphic">
+            <div class="portfolio-item-01">
+              <div class="portfolio-item-image">
+                <img class="img-fluid" src="{% static 'images/portfolio/small/01.jpg' %}" alt="">
+                <div class="portfolio-item-hover">
+                  <a class="portfolio-popup" href="{% static 'images/portfolio/small/01.jpg' %}"><i class="fas fa-plus"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-item-caption">
+                <a class="d-flex align-items-center" href="#"> <span>Creative business work</span>  <i class="fas fa-long-arrow-alt-right ms-auto"></i></a>
+                <ul class="list-unstyled portfolio-item-category">
+                  <li><a href="#">Projects,</a></li>
+                  <li><a href="#">Creative</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--===== End of portfolio =====-->
+
+
+          <!--===== Start of portfolio =====-->
+          <div class="grid-item javascript graphic">
+            <div class="portfolio-item-01">
+              <div class="portfolio-item-image">
+                <img class="img-fluid" src="{% static 'images/portfolio/small/01.jpg' %}" alt="">
+                <div class="portfolio-item-hover">
+                  <a class="portfolio-popup" href="{% static 'images/portfolio/small/01.jpg' %}"><i class="fas fa-plus"></i></a>
+                </div>
+              </div>
+              <div class="portfolio-item-caption">
+                <a class="d-flex align-items-center" href="#"> <span>Creative business work</span>  <i class="fas fa-long-arrow-alt-right ms-auto"></i></a>
+                <ul class="list-unstyled portfolio-item-category">
+                  <li><a href="#">Projects,</a></li>
+                  <li><a href="#">Creative</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--===== End of portfolio =====-->
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--==========
+  End of portfolio section ==========-->
+
+
+{% endblock main_content %}
+
