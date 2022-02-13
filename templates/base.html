@@ -13,7 +13,7 @@
     <title>DevA+ | {% block title %} {% endblock title %}</title>
 
     <!--===== Favicon =====-->
-    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}"/>
+    <link rel="shortcut icon" href="{{ company_info.favicon.url }}"/>
 
     <!--===== Google fonts =====-->
     <link rel="stylesheet"
@@ -50,7 +50,7 @@
         <div class="container-fluid">
 
             <!--===== Start of logo =====-->
-            <a class="navbar-brand" href="{% url 'index' %}"> <img class="logo" src="{% static 'images/logo.svg' %}" alt="Logo"> </a>
+            <a class="navbar-brand" href="{% url 'index' %}"> <img class="logo" src="{{ company_info.logo.url }}" alt="Logo"> </a>
             <!--===== End of logo =====-->
 
             <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -64,38 +64,35 @@
             <!--===== Start of nav =====-->
             <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
                 <ul class="navbar-nav">
-                    <li class="nav-item dropdown mega-dropdown active">
+                    <li class="nav-item dropdown mega-dropdown">
                         <a class="nav-link" href="{% url 'index' %}" id="navbar-home"
                            aria-haspopup="true" aria-expanded="false"> <span class="text-line">Home </span> </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbar-features"
+                        <a class="nav-link" href="{% url 'about_us' %}" id="navbar-features"
                            aria-haspopup="true" aria-expanded="false">
                             <span class="text-line"> About Us </span>
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbar-pages"
+                        <a class="nav-link" href="{% url 'services' %}" id="navbar-pages"
                            aria-haspopup="true" aria-expanded="false">
                             <span class="text-line"> Services </span>
                         </a>
                     </li>
                     <li class="nav-item dropdown mega-dropdown">
-                        <a class="nav-link" href="#" id="navbar-portfolio"
+                        <a class="nav-link" href="{% url 'portfolio' %}" id="navbar-portfolio"
                            aria-haspopup="true" aria-expanded="false"> <span class="text-line">Portfolio </span> </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbar-blog"
+                        <a class="nav-link" href="{% url 'contact_us' %}" id="navbar-blog"
                            aria-haspopup="true" aria-expanded="false">
                             <span class="text-line"> Contact Us </span>
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="navbar-icons list-unstyled ms-4 d-none d-lg-flex align-items-center">
-                <a class="btn btn-naked btn-icon-right me-4" href="#">Login</a>
-                <a class="btn btn-black btn-rounded" href="#">Sign in</a>
-            </div>
+
             <!--===== End of nav =====-->
 
         </div>
@@ -118,9 +115,9 @@
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-5 col-sm-6 mb-4 mb-lg-0">
-                <a href="{% url 'index' %}"> <img class="footer-logo" src="{% static 'images/logo.svg'%}" alt="Logo"> </a>
-                <h5 class="mt-5 text-white">(781) 210-0377</h5>
-                <h3 class="mt-4 text-white">info@example.com</h3>
+                <a href="{% url 'index' %}"> <img class="footer-logo" src="{{ company_info.logo.url }}" alt="Logo"> </a>
+                <h5 class="mt-5 text-white">{{ company_location.number }}</h5>
+                <h3 class="mt-4 text-white">{{ company_location.mail }}</h3>
             </div>
             <div class="col-lg-2 col-sm-6 mb-4 mb-lg-0">
 
