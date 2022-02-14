@@ -805,7 +805,7 @@
 				e.stopPropagation();
 			} else {
 				$.ajax( {
-					url: 'php/sendmail.php',
+					url: '/contact-us/',
 					type: 'post',
 					data: _form.serialize() + '&submit=contact',
 					dataType: 'json',

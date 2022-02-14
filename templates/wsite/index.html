@@ -39,14 +39,14 @@
                                         class="text-warning hedding-svg"> Digitally. </span></h1>
                                 <h5 class="mt-5" data-swiper-animation="fadeInUp" data-delay="1s" data-duration="1s">
                                     Creative, flexible, portable, user-friendly, reliable</h5>
-                                <a class="btn btn-green btn-round mt-3 mt-sm-5" href="#"
+                                <a class="btn btn-green btn-round mt-3 mt-sm-5" href="{% url 'services' %}"
                                    data-swiper-animation="fadeInUp"
                                    data-delay="1s" data-duration="1s">Our Services</a>
-                                <a class="btn btn-outline-dark btn-round ms-2 mt-3 mt-sm-5" href="#"
+                                <a class="btn btn-outline-dark btn-round ms-2 mt-3 mt-sm-5" href="{% url 'contact_us' %}"
                                    data-swiper-animation="fadeInUp" data-delay="1s" data-duration="1s">Get a Quote</a>
                             </div>
                             <div class="col-lg-6 position-relative text-center">
-                                <img class="img-fluid" src="{% static 'images/landing/cloud.jpg' %}" alt="">
+                                <img class="img-fluid" src="{{ hero_section.pic1.url }}" alt="">
                             </div>
                         </div>
                         <!--===== End of row =====-->
@@ -64,14 +64,14 @@
                                 <h5 class="mt-5" data-swiper-animation="fadeInUp" data-delay="1s" data-duration="1s">
                                     In our company, we all have 2 jobs: <br>1) to do our job and <br>2) to improve it
                                 </h5>
-                                <a class="btn btn-green btn-round mt-3 mt-sm-5" href="#"
+                                <a class="btn btn-green btn-round mt-3 mt-sm-5" href="{% url 'services' %}"
                                    data-swiper-animation="fadeInUp"
                                    data-delay="1s" data-duration="1s">Our Services</a>
-                                <a class="btn btn-outline-dark btn-round ms-2 mt-3 mt-sm-5" href="#"
+                                <a class="btn btn-outline-dark btn-round ms-2 mt-3 mt-sm-5" href="{% url 'contact_us' %}"
                                    data-swiper-animation="fadeInUp" data-delay="1s" data-duration="1s">Get a Quote</a>
                             </div>
                             <div class="col-lg-6 position-relative text-center">
-                                <img class="img-fluid" src="{% static 'images/landing/agile.jpg' %}" alt="">
+                                <img class="img-fluid" src="{{ hero_section.pic2.url }}" alt="">
                             </div>
                         </div>
                         <!--===== End of row =====-->
@@ -140,11 +140,7 @@
                             <div id="collapse4" class="accordion-collapse collapse show" aria-labelledby="heading4"
                                  data-bs-parent="#accordion02">
                                 <div class="accordion-body">
-                                    <p class="mb-3">At DevA+, as it is clear from our name, we develop innovative and
-                                        creative products and services that provide total communication and information
-                                        solutions. Among a plethora of services, web design and development, tailor-made
-                                        applications, ERPs, CRMs, e-commerce solutions, business-to-business
-                                        applications, and business-to-client applications are few that we offer.</p>
+                                    <p class="mb-3">{{ company_info.value }}</p>
                                 </div>
                             </div>
                         </div>
@@ -158,11 +154,7 @@
                             <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
                                  data-bs-parent="#accordion02">
                                 <div class="accordion-body">
-                                    <p class="mb-3">Sunt animi ratione doloribus illo <span
-                                            class="text-primary">45,259</span> velit omnis? Doloribus quasi, maxime sint
-                                        repellendus tenetur eum placeat ducimus similique dolor ut nihil velit
-                                        cupiditate!
-                                        Modi impedi</p>
+                                    <p class="mb-3">{{ company_info.chooseUs|safe }}</p>
                                 </div>
                             </div>
                         </div>
@@ -176,18 +168,14 @@
                             <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
                                  data-bs-parent="#accordion02">
                                 <div class="accordion-body">
-                                    <p class="mb-3">Ea qui debitis dolores quasi officiis, maiores enim, error
-                                        perspiciatis
-                                        veniam distinctio eaque voluptatum aperiam illum in quisquam aliquam nemo,
-                                        nesciunt
-                                        <span class="text-primary">36,785</span> sed iusto ipsum</p>
+                                    <p class="mb-3">{{ company_info.weOffer|safe }}</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <!--===== End of accordion =====-->
 
-                    <p class="text-dark mb-0 mt-4"> Or <a class="btn btn-naked-border" href="#">Browse Our Services</a>
+                    <p class="text-dark mb-0 mt-4"> Or <a class="btn btn-naked-border" href="{% url 'services' %}">Browse Our Services</a>
                     </p>
                 </div>
             </div>
@@ -197,110 +185,65 @@
 
     <!--==========
         End of services section ==========-->
+<!--==========
+      Start of client section ==========-->
 
-
-    <!--==========
-       Start of Clients section ==========-->
-
-    <section class="py-sm-3">
+    <section class="pb-3">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-
-                    <!--===== Start of testimonials item =====-->
+                <div class="col-12">
+                    <div class="mb-5 text-center">
+                        <h4> Our Clients </h4>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <!--===== Start of clients item =====-->
                     <div class="client-item">
                         <img class="img-fluid image-grayscale" src="{% static 'images/clients/01.svg' %}" alt="">
-                        <ul class="client-item-list">
-                            <li><span>Responsive </span></li>
-                            <li><span>Flexibility </span></li>
-                            <li><span>Incredible </span></li>
-                            <li><span>Creative </span></li>
-                        </ul>
                     </div>
-                    <!--===== End of testimonials item =====-->
-
+                    <!--===== End of clients item =====-->
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-
-                    <!--===== Start of testimonials item =====-->
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <!--===== Start of clients item =====-->
                     <div class="client-item">
                         <img class="img-fluid image-grayscale" src="{% static 'images/clients/02.svg' %}" alt="">
-                        <ul class="client-item-list">
-                            <li><span>Responsive </span></li>
-                            <li><span>Flexibility </span></li>
-                            <li><span>Incredible </span></li>
-                            <li><span>Creative </span></li>
-                        </ul>
                     </div>
-                    <!--===== End of testimonials item =====-->
-
+                    <!--===== End of clients item =====-->
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-
-                    <!--===== Start of testimonials item =====-->
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <!--===== Start of clients item =====-->
                     <div class="client-item">
                         <img class="img-fluid image-grayscale" src="{% static 'images/clients/03.svg' %}" alt="">
-                        <ul class="client-item-list">
-                            <li><span>Responsive </span></li>
-                            <li><span>Flexibility </span></li>
-                            <li><span>Incredible </span></li>
-                            <li><span>Creative </span></li>
-                        </ul>
                     </div>
-                    <!--===== End of testimonials item =====-->
-
+                    <!--===== End of clients item =====-->
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-
-                    <!--===== Start of testimonials item =====-->
-                    <div class="client-item">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <!--===== Start of clients item =====-->
+                     <div class="client-item">
                         <img class="img-fluid image-grayscale" src="{% static 'images/clients/04.svg' %}" alt="">
-                        <ul class="client-item-list">
-                            <li><span>Responsive </span></li>
-                            <li><span>Flexibility </span></li>
-                            <li><span>Incredible </span></li>
-                            <li><span>Creative </span></li>
-                        </ul>
                     </div>
-                    <!--===== End of testimonials item =====-->
-
+                    <!--===== End of clients item =====-->
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-
-                    <!--===== Start of testimonials item =====-->
-                    <div class="client-item">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <!--===== Start of clients item =====-->
+                     <div class="client-item">
                         <img class="img-fluid image-grayscale" src="{% static 'images/clients/05.svg' %}" alt="">
-                        <ul class="client-item-list">
-                            <li><span>Responsive </span></li>
-                            <li><span>Flexibility </span></li>
-                            <li><span>Incredible </span></li>
-                            <li><span>Creative </span></li>
-                        </ul>
                     </div>
-                    <!--===== End of testimonials item =====-->
-
+                    <!--===== End of clients item =====-->
                 </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
-
-                    <!--===== Start of testimonials item =====-->
-                    <div class="client-item">
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <!--===== Start of clients item =====-->
+                     <div class="client-item">
                         <img class="img-fluid image-grayscale" src="{% static 'images/clients/06.svg' %}" alt="">
-                        <ul class="client-item-list">
-                            <li><span>Responsive </span></li>
-                            <li><span>Flexibility </span></li>
-                            <li><span>Incredible </span></li>
-                            <li><span>Creative </span></li>
-                        </ul>
                     </div>
-                    <!--===== End of testimonials item =====-->
-
+                    <!--===== End of clients item =====-->
                 </div>
             </div>
         </div>
     </section>
 
     <!--==========
-        End of Clients section ==========-->
+      End of client section ==========-->
 
 
     <!--==========
@@ -311,8 +254,7 @@
             <div class="row align-items-center">
                 <div class="col-md-6 col-lg-5">
                     <span class="bg-pink-soft-01 px-4 py-2 text-dark rounded">Overview of Services</span>
-                    <h3 class="mt-4">To give real service you must add something which cannot be bought or measured with
-                        money, and that is sincerity and integrity.</h3>
+                    <h3 class="mt-4">{{ company_info.servicesOverview }}</h3>
                     <div class="row mt-5">
                         <div class="col-lg-6 mb-4">
                             <div class="d-flex bg-primary-soft-01 p-4 rounded">
@@ -347,7 +289,7 @@
                             </div>
                         </div>
                     </div>
-                    <p class="text-dark mb-0 mt-4"><a class="btn btn-naked-border" href="#">Browse All Services</a>
+                    <p class="text-dark mb-0 mt-4"><a class="btn btn-naked-border" href="{% url 'services' %}">Browse All Services</a>
                 </div>
                 <div class="col-md-6 offset-lg-1">
                     <img class="img-fluid" src="{% static 'images/landing/07.png' %}" alt="">
@@ -475,64 +417,26 @@
                          data-autoplay="true" data-auto-speed="2500" data-disable-on-touch="false" data-dots="true"
                          data-auto-height="false" data-pagination="true" data-navigation="true">
                         <div class="swiper-wrapper">
-
+                            {% for data in testimonial  %}
                             <!--===== Start of testimonials item =====-->
                             <div class="swiper-slide">
                                 <div class="bg-pink-soft-01 p-5 rounded">
                                     <div class="mb-2">
-                                        <p>Be grateful! It is easy to thank after obtaining what you want, thank before
-                                            having what you want...”</p>
+                                        <p>{{ data.client_text }}</p>
                                     </div>
                                     <div class="d-flex align-items-center">
                                         <img class="img-fluid rounded-circle avatar-50"
-                                             src="{% static 'images/avatar/01.jpg' %}" alt="">
+                                             src="{{ data.clint_pic.url }}" alt="">
                                         <div class="ms-3">
-                                            <h6 class="mb-0"><a class="text-primary" href="#">Lewis Bass</a></h6>
-                                            <small class="d-block">by @google play</small>
+                                            <h6 class="mb-0"><a class="text-primary" href="#">{{ data.client_name }}</a></h6>
+                                            <small class="d-block">by @{{ data.company_name }}</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <!--===== End of testimonials item =====-->
+                            {% endfor %}
 
-                            <!--===== Start of testimonials item =====-->
-                            <div class="swiper-slide">
-                                <div class="bg-warning-soft-01 p-5 rounded">
-                                    <div class="mb-2">
-                                        <p>If you are going to achieve excellence in big things, you develop the habit
-                                            in
-                                            little matters...”</p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <img class="img-fluid rounded-circle avatar-50"
-                                             src="{% static 'images/avatar/02.jpg' %}" alt="">
-                                        <div class="ms-3">
-                                            <h6 class="mb-0"><a class="text-primary" href="#">Jerome Mayo</a></h6>
-                                            <small class="d-block">by @slack</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--===== End of testimonials item =====-->
-
-                            <!--===== Start of testimonials item =====-->
-                            <div class="swiper-slide">
-                                <div class="bg-primary-soft-01 p-5 rounded">
-                                    <div class="mb-2">
-                                        <p>Be patient with yourself. Self-growth is tender; it's holy ground. There's no
-                                            greater investment...”</p>
-                                    </div>
-                                    <div class="d-flex align-items-center">
-                                        <img class="img-fluid rounded-circle avatar-50"
-                                             src="{% static 'images/avatar/03.jpg' %}" alt="">
-                                        <div class="ms-3">
-                                            <h6 class="mb-0"><a class="text-primary" href="#">Naima Haley</a></h6>
-                                            <small class="d-block">by @skype</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--===== End of testimonials item =====-->
 
                         </div>
                     </div>
